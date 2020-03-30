@@ -15,9 +15,9 @@ public class Teacher {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
-    private String password = "123456";
+    private String password;
     private int limit;//学生选择上限
-    private int rank;//选择范围
+    private int rank;//选择排名范围
     @OneToMany(mappedBy = "teacher")
     private List<Student> students;//已选学生
 }
