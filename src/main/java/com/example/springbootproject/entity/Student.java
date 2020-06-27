@@ -15,10 +15,13 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
+    @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
+    @MapsId
+    private User user;
     @ManyToOne
     private Teacher teacher;
     @OneToMany(mappedBy = "student")
     private List<Chioce> chioces;
     @OneToMany(mappedBy = "student")
-    private List<DirectionChioce> directionChioces;
+    private List<Direction> directions;
 }

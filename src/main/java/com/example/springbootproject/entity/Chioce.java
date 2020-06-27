@@ -14,7 +14,7 @@ public class Chioce {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String detail;
-    private int score;
+    private double score;
     @ManyToOne
     private Student student;
     @ManyToOne

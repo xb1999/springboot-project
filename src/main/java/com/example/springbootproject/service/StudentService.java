@@ -19,15 +19,8 @@ public class StudentService {
     private ChioceRepository chioceRepository;
     @Autowired
     private DirectionRepository directionRepository;
-    @Autowired
-    private DirectionChioceRepository directionChioceRepository;
 
-    /*添加学生*/
-    private void addStudent(Integer sid,String sname){
-        Student student = new Student();
-        student.setName(sname);
-        student.setId(sid);
-        studentRepository.save(student);
+
     }
 
 }

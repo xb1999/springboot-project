@@ -1,5 +1,6 @@
 package com.example.springbootproject.service;
 
+import com.example.springbootproject.entity.Course;
 import com.example.springbootproject.entity.Teacher;
 import com.example.springbootproject.repository.CourseRepository;
 import com.example.springbootproject.repository.DirectionChioceRepository;
@@ -38,4 +39,9 @@ public class TeacherService {
         }
         teacherRepository.save(teacher);
     }
+    /*添加课程信息*/
+    private void addCourse(Integer cid,String cname,float weight,Integer limitscore){
+        
+    }
+    /*修改课程信息*/
 }

@@ -4,7 +4,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Data
@@ -16,6 +15,6 @@ public class Direction {
     private int id;
     private String detail;
     private float weight;//方向权重
-    @OneToMany(mappedBy = "direction")
-    private List<DirectionChioce> directionChioces;
+    @ManyToOne
+    private Student student;
 }

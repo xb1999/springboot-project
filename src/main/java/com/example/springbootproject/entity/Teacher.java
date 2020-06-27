@@ -16,8 +16,11 @@ public class Teacher {
     private int id;
     private String name;
     private String password;
-    private int limit;//学生选择上限
-    private int rank;//选择排名范围
+    private Integer quantity;
+    private Integer ranges;
+    private Integer reservedRange;
     @OneToMany(mappedBy = "teacher")
-    private List<Student> students;//已选学生
+    private List<Student> students;
+    @OneToMany(mappedBy = "teacher")
+    private List<Course> courses;
 }
